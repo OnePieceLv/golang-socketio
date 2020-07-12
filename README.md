@@ -11,7 +11,6 @@ Examples directory contains simple client and server.
 
     Add golang-socketio to your go.mod file:
     
-    ```golang
     module github.com/x/y
 
     go 1.14
@@ -19,7 +18,6 @@ Examples directory contains simple client and server.
     require (
             github.com/OnePieceLv/golang-socketio latest
     )
-    ```
 
 ### Simple server usage
 
