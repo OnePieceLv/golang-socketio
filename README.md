@@ -9,11 +9,21 @@ Examples directory contains simple client and server.
 
 ### Installation
 
-    go get github.com/graarh/golang-socketio
+    Add golang-socketio to your go.mod file:
+    
+    ```golang
+    module github.com/x/y
+
+    go 1.14
+
+    require (
+            github.com/OnePieceLv/golang-socketio latest
+    )
+    ```
 
 ### Simple server usage
 
-```go
+```golang
 	//create
 	server := gosocketio.NewServer(transport.GetDefaultWebsocketTransport())
 
@@ -69,7 +79,7 @@ var socket = io('ws://yourdomain.com', {transports: ['websocket']});
 
 ### Server, detailed usage
 
-```go
+```golang
     //create server instance, you can setup transport parameters or get the default one
     //look at websocket.go for parameters description
 	server := gosocketio.NewServer(transport.GetDefaultWebsocketTransport())
@@ -142,7 +152,7 @@ var socket = io('ws://yourdomain.com', {transports: ['websocket']});
 
 ### Client
 
-```go
+```golang
     //connect to server, you can use your own transport settings
 	c, err := gosocketio.Dial(
 		gosocketio.GetUrl("localhost", 80, false),
